@@ -39,7 +39,7 @@ export default function SearchPage(){
         // jeśli uzytkownik nie wpisze nic, funkcja sięnie wywoła
         if(breedParams.length > 0){
 
-            const textWithNoSpaces = breedParams.trim().split(' ').join('')
+            const textWithNoSpaces = breedParams.trim().split(' ').join('').toLowerCase()
             const url = `https://dog.ceo/api/breed/${textWithNoSpaces}/images/random`
 
             fetch(url)
